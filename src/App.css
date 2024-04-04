@@ -1,0 +1,383 @@
+.parent{
+  background-image: url('../public/IMG-20230422-WA0027.jpg');
+  background-color: #007bff;
+}
+
+.modal-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 500px;
+  width: 800px;
+  background-color: #fff;
+  padding-top: 10px;
+  padding-bottom: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  overflow-y: auto;
+}
+
+.left-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 100%;
+  width: 25%;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.logo{
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+
+.logo img{
+  width:120px;
+  height: 120px;
+}
+
+.description{
+  width: 100%;
+  height: 70%;
+  border-top: 1px solid #ccc;
+}
+
+.right-section {
+  background-color: #fff;
+  width: 55%;
+  padding:0px 10px;
+
+}
+
+.calendar-time-container {
+  max-height: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.time-selector-container {
+  margin-left: 20px;
+  margin-bottom: 20px;
+  height: 100%;
+  max-height: 300px; 
+}
+
+/* DATEPICKER------------------ */
+
+.custom-datepicker {
+  border: none!important;
+  box-shadow: none;
+}
+
+.custom-datepicker .react-datepicker__header {
+  background-color: transparent;
+  border-bottom: none;
+  margin-bottom: 10px;
+}
+
+.react-datepicker__current-month,
+.react-datepicker__navigation {
+  margin-bottom: 20px; /* Add margin bottom to separate the header from the days of the week */
+}
+
+.react-datepicker__navigation:hover{
+    background-color: #cbe0f8;
+    border-radius: 50%;
+}
+
+.react-datepicker {
+  width: 300px; /* Set the width of the date picker */
+}
+
+.react-datepicker__day-name {
+  width: 40px; /* Set the width of each weekday */
+  padding: 0 5px; /* Add padding to increase the gap between each weekday */
+}
+
+.react-datepicker__day {
+  padding: 0 5px;
+  width: 40px; /* Set the width of each date number */
+  height: 35px; /* Set the height of each date number */
+}
+
+.react-datepicker__day--selected {
+  background-color: rgb(13, 117, 253);
+  border-radius: 50%;
+}
+
+/* TIME SELECTOR-------------- */
+
+.time-selector-container label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.time-selector-container ul {
+  padding: 0;
+  margin: 0;
+}
+
+.time-selector-container li {
+  list-style: none;
+  display: block;
+  margin-bottom: 5px;
+  padding: 8px 9px;
+  border: 1px solid rgb(170, 170, 246);
+  box-shadow: 0 0 5px rgb(220, 220, 243);
+  color: rgb(13, 117, 253);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  width:100px;
+  font-weight: bold;
+}
+
+.time-selector-container li:hover {
+  background-color:#2b2b2b;
+  color: #fff;
+}
+
+.modal-action-btn {
+  padding: 8px 24px;
+  border-radius: 4px;
+  border: none;
+  background-color: rgb(13, 117, 253);
+  color: #fff;
+  margin-top: 100px;
+  cursor: pointer;
+}
+
+.modal-action-btn:hover{
+  background-color:#2b2b2b;
+  color: #fff;
+}
+
+/* Form css */
+.form-container {
+  max-width: 500px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow-y: auto; /* Add vertical scrollbar if needed */
+}
+
+.form-container span {
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 20px;
+  font-size: larger;
+}
+
+.form-container label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.Options-section label {
+  font-weight: normal;
+}
+
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container textarea,
+.form-container select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+
+.form-container button {
+  padding: 10px 20px;
+  background-color: #fff;
+  color: rgb(13, 117, 253);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  border-radius: 50px;
+  border: 1px solid rgb(13, 117, 253);
+}
+
+.form-container button:hover {
+  background-color:#2b2b2b;
+  color: #fff;
+  border: none;
+}
+
+.email-section {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.email-section input[type="email"] {
+  margin-bottom: 5px;
+}
+
+.email-section button {
+  margin-top: 5px;
+  align-self: flex-start;
+}
+
+.Options-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Options-section label:not(.Options-section input[type="radio"] + label,.Options-section input[type="checkbox"] + label) {
+  font-weight: bold;
+}
+
+.Options-section div div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.Options-section div input[type="radio"],.Options-section div input[type="checkbox"] {
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+  appearance: none; /* Reset the default appearance */
+}
+
+.Options-section div input[type="radio"]:before,.Options-section div input[type="checkbox"]:before {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.Options-section div input[type="radio"]:checked:before,.Options-section div input[type="checkbox"]:checked:before {
+  content: '✔';
+  color: rgb(13, 117, 253);
+}
+
+.Options-section div label {
+  margin-bottom: 0;
+}
+
+
+/* form data */
+.form-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding: 20px;
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+  
+}
+
+.form-data > div { 
+  width: calc(100% - 40px); 
+  /* margin-bottom: 20px; */
+}
+
+.form-data .info {
+  height: 150px;
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px
+}
+
+.form-data .info h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  margin-left: 15px;
+}
+
+.form-data .info span{
+  font-size: 16px;
+  margin-bottom: 10px;
+  margin-left: 15px;
+  color: #555555;
+  font-weight: bold;
+} 
+.topmost p{
+  margin-bottom: 0;
+}
+
+.layer3{
+  margin-top: 20px;
+  border-top: 1px solid #ccc;
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start; 
+}
+
+ .layer3 h2{
+  margin-top: 40px;
+  font-weight: 200;
+  white-space: nowrap;
+  margin-bottom: 10px;
+}
+
+.layer3 h4{
+  font-weight: 200;
+  margin-top: 0px;
+}
+
+.signup-options {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
+}
+
+.signup-options img {
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+}
+
+.google{
+  padding: 5px;
+  border:1px solid #555555;
+  border-radius: 50px;
+}
+
+.microsoft{
+  margin-left: 15px;
+  padding: 5px;
+  border:1px solid #555555;
+  border-radius: 50px;
+}
+
+.other {
+  color: #007bff;
+  margin-top: 20px;
+  width: 100%;
+  text-align: start;
+  margin-left: 100px;
+}
+
