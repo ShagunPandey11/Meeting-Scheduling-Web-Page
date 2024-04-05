@@ -11,23 +11,23 @@ const Form = ({ onSubmit }) => {
     const [moreAbout, setMoreAbout] = useState([]);
 
     const fiberyWorkOptions = [
-        { label: 'Myself', value: 'myself' },
-        { label: '< 10 people', value: '<10' },
-        { label: '10-50 people', value: '10-50' },
-        { label: '50+ people', value: '50+' }
+        { label: '🥕Myself', value: 'myself' },
+        { label: '👯< 10 people', value: '<10' },
+        { label: '🦄10-50 people', value: '10-50' },
+        { label: '🦅50+ people', value: '50+' }
     ];
 
     const moreaboutOptions = [
-        { label: 'Leadership', value: 'Leadership' },
-        { label: 'Consulting', value: 'Consulting' },
-        { label: 'Product Management', value: 'Product Management' },
-        { label: 'Sales', value: 'Sales' },
-        { label: 'Design', value: 'Design' },
-        { label: 'Engeneering', value: 'Engeneering' },
-        { label: 'Marketing', value: 'Marketing' },
-        { label: 'Human Resource', value: 'Human Resource' },
-        { label: 'Education', value: 'Education' },
-        { label: 'Something Else', value: 'Something Else' }
+        { label: '🗻Leadership', value: 'Leadership' },
+        { label: '🦉Consulting', value: 'Consulting' },
+        { label: '☀️Product Management', value: 'Product Management' },
+        { label: '🎧Sales', value: 'Sales' },
+        { label: '🎨Design', value: 'Design' },
+        { label: '💻Engeneering', value: 'Engeneering' },
+        { label: '💣Marketing', value: 'Marketing' },
+        { label: '💎Human Resource', value: 'Human Resource' },
+        { label: '📙Education', value: 'Education' },
+        { label: '❓Something Else', value: 'Something Else' }
     ];
 
     const handleSubmit = (e) => {

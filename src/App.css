@@ -1,9 +1,14 @@
 .parent{
-  background-image: url('../public/IMG-20230422-WA0027.jpg');
-  background-color: #007bff;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-image: url('../public/meeting.png');
+  background-color: rgba(66, 52, 52, 0.5); /* Adjust the opacity value to achieve the desired level of fading */
+  background-blend-mode: multiply; /* Mix the background-color with the background-image to create a faded effect */
 }
 
 .modal-container {
+  /* background-color: rgb(74, 70, 70); */
   position: fixed;
   top: 50%;
   left: 50%;
@@ -30,7 +35,7 @@
   justify-content: space-between;
   align-items: flex-start;
   height: 100%;
-  width: 25%;
+  /* width: 25%; */
   padding: 20px;
   background-color: #fff;
 }
@@ -381,3 +386,243 @@
   margin-left: 100px;
 }
 
+/* Media Query for Mobile Devices */
+@media (max-width: 600px) {
+  .parent {
+    background-size: cover; /* Adjust background image size for smaller screens */
+    background-position: center; 
+    background-size: contain;
+  }
+
+  .modal-container { 
+    width: 60%; 
+    padding: 10px; 
+  }
+ 
+
+  .left-section{
+    width:25%;
+    justify-content:unset;
+  }
+
+  .logo{
+    margin-bottom: 0;
+  }
+
+  .logo img{
+    width:60px;
+    height: 60px;
+  }
+  
+  .description{
+    width: 100%;
+    height: 70%;
+    border-top: 1px solid #ccc;
+  }
+
+  .right-section h1{
+    font-weight: bold;
+    font-size: medium;
+    white-space: nowrap;
+  }
+
+  .calendar-time-container {
+    max-height: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .react-datepicker {
+    margin-top: 20px;
+    width: 220px; /* Set the width of the date picker */
+  }
+  
+  .react-datepicker__day-name {
+    padding: 0 0px;
+  }
+  
+  .react-datepicker__day {
+    padding: 0 0px;
+    width: 2px; /* Set the width of each date number */
+    height: 20px; /* Set the height of each date number */
+  }
+
+
+  .time-selector-container {
+    margin-left: 15px;
+    margin-right: 10px;
+    height: 100%;
+    max-height: 300px; 
+  }
+  
+  .time-selector-container li {
+    padding: 5px 7px;
+    transition: background-color 0.3s ease;
+    width:50px;
+  }
+
+  .modal-action-btn {
+    padding: 8px 24px;
+    border-radius: 4px;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+
+  .form-data {
+    padding: 20px;
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    
+  }
+  
+  .form-data .info {
+    height: 170px;
+    width: 100%;
+  }
+  
+  .layer3 h2{
+    margin-top: 30px;
+    white-space: normal;
+    margin-bottom: 20px;
+  }
+  
+  .signup-options img {
+    width: 15px;
+    height: 15px;
+    object-fit: cover;
+  }
+  
+  .google{
+    padding: 3px;
+    font-size: 12px;
+    width: 500px;
+    height: 20px;
+  }
+  
+  .microsoft{
+    margin-top: 5px;
+    margin-left: 0px;
+    padding: 3px;
+    font-size: 12px;
+    width: 600px;
+    height: 20px;
+  }
+  
+  .other {
+    margin-top:30px;
+    margin-left: 0px;
+    width: 20%;
+    white-space: nowrap;
+  }
+
+  .form-container {
+    margin-left: 20px; 
+  }
+  
+  /* .form-container span {
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: larger;
+  } */
+  
+  /* .form-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  } */
+  
+  /* .Options-section label {
+    font-weight: normal;
+  } */
+  
+  /* .form-container input[type="text"],
+  .form-container input[type="email"],
+  .form-container textarea,
+  .form-container select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  } */
+  
+  
+  /* .form-container button {
+    padding: 10px 20px;
+    background-color: #fff;
+    color: rgb(13, 117, 253);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    border-radius: 50px;
+    border: 1px solid rgb(13, 117, 253);
+  } */
+  
+  /* .form-container button:hover {
+    background-color:#2b2b2b;
+    color: #fff;
+    border: none;
+  } */
+  
+  /* .email-section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+  } */
+  
+  /* .email-section input[type="email"] {
+    margin-bottom: 5px;
+  } */
+  
+  /* .email-section button {
+    margin-top: 5px;
+    align-self: flex-start;
+  } */
+  
+  /* .Options-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  } */
+  
+  /* .Options-section label:not(.Options-section input[type="radio"] + label,.Options-section input[type="checkbox"] + label) {
+    font-weight: bold;
+  } */
+  
+  /* .Options-section div div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  } */
+  
+  /* .Options-section div input[type="radio"],.Options-section div input[type="checkbox"] {
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    appearance: none; 
+  } */
+  
+  /* .Options-section div input[type="radio"]:before,.Options-section div input[type="checkbox"]:before {
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  } */
+  
+  /* .Options-section div input[type="radio"]:checked:before,.Options-section div input[type="checkbox"]:checked:before {
+    content: '✔';
+    color: rgb(13, 117, 253);
+  } */
+  
+  /* .Options-section div label {
+    margin-bottom: 0;
+  } */
+  
+}

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import "./App.css";
 import Calendar from './Calender';
 import TimeSelector from './TimeSelector';
@@ -7,17 +7,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGlobe, faCalendar, faVideo, faUser, faCheck, faClock} from '@fortawesome/free-solid-svg-icons'
 
 const App = () => {
-  const [isOpen, setIsOpen] = useState(true);
   const [isSubmited, setIsSubmited] = useState(false);
   const [selectedDate, setSelectedDate] = useState('');
   const [selectedTime, setSelectedTime] = useState('');
   const [showForm, setShowForm] = useState(false);
   const [formData, setFormData] = useState(null);
   const [selectedTimeZone, setSelectedTimeZone] = useState('');
-
-  const toggleModal = () => {
-    setIsOpen(!isOpen);
-  };
 
   const handleDateChange = (date) => {
     setSelectedDate(date);
@@ -41,24 +36,21 @@ const App = () => {
   };
 
   return (
-    <div className="parent">
-    <div>
-      {/* {!isOpen && <button className="demo-btn" onClick={toggleModal}>Get a demo</button>} */}
-      {isOpen && (
-        <div className="modal-container">
+    <div className="parent"> 
+        <div className='modal-container'>
           {!isSubmited && (<div className="left-section" style={{width : selectedDate ?'25%' : '40%' }}>
             <div className='logo'>
-              <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRjfkBAEpv7f-lNLGbJB_YOx_spMKG-55COw&s' alt='img' className="close-btn" onClick={toggleModal} />
+              <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRjfkBAEpv7f-lNLGbJB_YOx_spMKG-55COw&s' alt='img' className="close-btn" />
             </div>
             <div className='description'>
               <h2>Fibery Demo</h2>
               <span style={{fontWeight:'bold', color:"#646262"}}><FontAwesomeIcon icon={faClock}/> 45 min</span><br/><br/>
-              {showForm && selectedDate && selectedTime && (<span style={{fontWeight:'bold', color:"#646262"}}> {selectedTime}, {selectedDate.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</span>)}<br/>
-              {showForm && selectedTimeZone && (<span style={{fontWeight:'bold', color:"#646262"}}><br></br><FontAwesomeIcon icon={faGlobe} /> {selectedTimeZone}</span>)}
-              <p>Book a meeting with our Fibery team. Talk to a real person about how to get your processes set up with us or not.</p>
+              {showForm && selectedDate && selectedTime && (<span style={{fontWeight:'bold', color:"#646262"}}><FontAwesomeIcon icon={faCalendar} /> {selectedTime}, {selectedDate.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</span>)}<br/>
+              {showForm && selectedTimeZone && (<span style={{fontWeight:'bold', color:"#646262",display:'inlineBlock'}}><br></br><FontAwesomeIcon icon={faGlobe} />{selectedTimeZone}</span>)}
+              <p>Book a meeting with our Fibery team. Talk to a real person about how to get your processes set up with us 🦄 or 💩 not.</p>
             </div>
           </div>)}
-          {!isSubmited && (<div className='right-section' style={{width : selectedDate ?'55%' : '40%' }}>
+          {!isSubmited && (<div className='right-section' style={{width : selectedDate ?'55%' : '40%',}}>
             {!showForm && <h1>Select Date and Time</h1>}
 
             <div className="calendar-time-container">
@@ -95,7 +87,7 @@ const App = () => {
                 <span><FontAwesomeIcon icon={faUser}/>    {formData.name}</span>
                 <span><FontAwesomeIcon icon={faCalendar}/>  {selectedTime}, {selectedDate.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</span>
                 <span><FontAwesomeIcon icon={faGlobe}/>     {selectedTimeZone}</span>
-                <span><FontAwesomeIcon icon={faVideo}/>    web conferencing details to follow</span>       
+                <span><FontAwesomeIcon icon={faVideo}/>  web conferencing details to follow</span>       
               </div>
 
               <div className='layer3'>
@@ -111,9 +103,6 @@ const App = () => {
               </div>            
           )}
         </div>
-        
-      )}
-      </div>
     </div>
   );
 };
